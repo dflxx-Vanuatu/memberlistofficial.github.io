@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+<!-----------------------------------------------------CSS CDN LINKS------------------------------------------------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
+<!-----------------------------------------------JAVASCRIPT CDN LINKS------------------------------------------------------>
+<script defer src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script defer src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script defer src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+<script defer src="script.js"></script>
+</head>
+
+<body class="container p-2 mt-4">
+    <table id="example" class="table table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th style="color: #079434;">Name</th>
+                <th style="color: #079434;">Constituency</th>
+                <th style="color: #079434;">Party</th>
+<!--                <th style="color: #079434;">Legislature</th>-->
+                <th style="color: #079434;">Position/Portfolio</th>
+                <th style="color: #079434;">Profile</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Hon. Andrew Napuat</td>
+                <td>Tanna</td>
+                <td>Graon mo Jastis Pati (GJP)</td>
+<!--                <td>12th</td>-->
+                <td>Member of Parliament</td>
+                <td><a href="#">View profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Alfred Maoh</td>
+                <td>Santo Rural</td>
+                <td>Graon mo Jastis Pati (GJP)</td>
+<!--                <td>12th</td>-->
+                <td>Member of Parliament</td>
+                <td> <a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Andikar Philip</td>
+                <td>Santo Rural</td>
+                <td>National Community Association (NCA)</td>
+<!--                <td>8th</td>-->
+                <td>Government</td>
+                <td> <a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Browny Donna</td>
+                <td>Malekula</td>
+                <td>Vanuatu Republican Pati (VRP)</td>
+<!--                <td>8th</td>-->
+                <td>Minister of Agriculture</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Barak Sope Mautamate</td>
+                <td>Efate Rural</td>
+                <td>Melanesian Progressive Party (MPP)</td>
+<!--                <td>8th</td>-->
+                <td>Deputy Leader of Opposition</td>
+                <td> <a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Bakoa Maraki Kaltonga</td>
+                <td>Efate</td>
+                <td>Vanuaku Party (VP)</td>
+<!--                <td>61</td>-->
+                <td>Minister of Infrastructure and Public Utility</td>
+                <td> <a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Bob Loughman</td>
+                <td>Tanna</td>
+                <td>Vanuaaku Party (VP)</td>
+<!--                <td>59</td>-->
+                <td>Leader of Oposition</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Charlot Salwai Tabimasmas</td>
+                <td>Pentecost</td>
+                <td>Union of Moderate Party (2002 - 2012)RMC</td>
+<!--                <td>55</td>-->
+                <td>Member of Parliament</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Carcasses K. Moana</td>
+                <td>Port-Vila</td>
+                <td>Green Confederation</td>
+<!--                <td>39</td>-->
+                <td>Prime Minister</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Carlot R. Alfred</td>
+                <td>Efate</td>
+                <td>Vanuatu Republican Party (2008 to 2012)Natatok</td>
+<!--                <td>23</td>-->
+                <td>Minister of Education</td>
+                <td> <a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Calep Isaac</td>
+                <td>Malekula</td>
+                <td>Vanuatu Green Confederation (GC)</td>
+<!--                <td>30</td>-->
+                <td>Member of Parliament</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Danny Silas</td>
+                <td>Banks</td>
+                <td>GJP</td>
+<!--                <td>22</td>-->
+                <td>Member of parliament</td>
+                <td> <a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. David Tosul</td>
+                <td>Pentecost</td>
+                <td>National United Party (2002 - 2013)
+Graon mo Jastis Parti (GJP)</td>
+<!--                <td>36</td>-->
+                <td> Minister of Agriculture, Forestry and Fisheries</td>
+                <td> <a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. David Areiasuv</td>
+                <td>Paama</td>
+                <td>People Progressive Party</td>
+<!--                <td>43</td>-->
+                <td>Member of Parliament</td>
+                <td> <a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Dahmasing John Salong</td>
+                <td>Ambrym</td>
+                <td>GJP</td>
+<!--                <td>19</td>-->
+                <td>Member of Parliament</td>
+                <td> <a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Dunstan Hilton</td>
+                <td>Banks</td>
+                <td>London</td>
+<!--                <td>3</td>-->
+                <td>People Progressive Party (PPP)</td>
+                <td> <a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Donald Isabelle</td>
+                <td> Epi Island</td>
+                <td>Vanuaaku Party (VP)</td>
+<!--                <td>64</td>-->
+                <td>Minister for Justice and Social Welfare</td>
+                <td> <a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. David Abel</td>
+                <td>Port Vila</td>
+                <td>Union Moderate Party (UMP)</td>
+<!--                <td>59</td>-->
+                <td>Member of Parliament</td>
+                <td> <a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Eta Rory</td>
+                <td>Malekula</td>
+                <td>Vanuatu Republican Pati (VRP)</td>
+<!--                <td>41</td>-->
+                <td>Minister for Agriculture, Forestry and Horticulture</td>
+                <td> <a href="#">View Profile </a></td>
+            </tr>
+            <tr>
+                <td>Hon. Edmund Julun</td>
+                <td>Malekula</td>
+                <td>GJP</td>
+<!--                <td>35</td>-->
+                <td>Member of Parliament</td>
+                <td> <a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Edwin Amblus Macreveth</td>
+                <td>Santo Rural</td>
+                <td>Friend Melanesian Party (FMP)</td>
+<!--                <td>30</td>-->
+                <td>First Deputy Speaker, Elected on 11 February 2016</td>
+                <td> <a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Edward Nalyal Molou</td>
+                <td>Tafea Outer Islands</td>
+                <td>VP</td>
+<!--                <td>40</td>-->
+                <td>Second Deputy Speaker, Elected on 20 April 2020</td>
+                <td> <a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Ephraim Kalsakau</td>
+                <td>Port-Vila</td>
+                <td>U-Bloc</td>
+<!--                <td>21</td>-->
+                <td>Member of Parliament</td>
+                <td> <a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Ephraim Boe Reve</td>
+                <td>Pentecost</td>
+                <td>GJP</td>
+<!--                <td>33</td>-->
+                <td>Member of Parliament</td>
+                <td> <a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Esmon Saimon</td>
+                <td>Malekula</td>
+                <td>Vanuaaku Pati (VP)</td>
+<!--                <td>47</td>-->
+                <td>Minister of Justice and Social Welfare, Appointed on 20 April 2020</td>
+                <td> <a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Francois Chani Tabisal</td>
+                <td>Pentecost</td>
+                <td>Vanuatu Leaders Party (VLP)</td>
+<!--                <td>42</td>-->
+                <td>Minister of Youth and Sport, Appointed on 5th September 2019 to 20 April 2020</td>
+                <td> <a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Fred William Tasso</td>
+                <td>Paama</td>
+                <td>GJP</td>
+<!--                <td>28</td>-->
+                <td>Leader of Government Business 2016</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Fabiano Nano Stevens</td>
+                <td>Santo Rural</td>
+                <td>The President of Vemarana Nagriamel Federation Custom Movement</td>
+<!--                <td>28</td>-->
+                <td>Opposition Whip, Elected on 22 April 2020</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. George Andre Wells</td>
+                <td>Luganville</td>
+                <td>Vanuaku Party (VP)
+People Progressive Party (PPP)</td>
+<!--                <td>48</td>-->
+                <td>Minister of Health, Appointed on 15 May 2014 - 11 June 2015
+Speaker of Parliament, Elected on 19 November 2012 - 6 April 2013</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Gillion William</td>
+                <td>Efate Rural</td>
+                <td>Graon Justice Party</td>
+<!--                <td>20</td>-->
+                <td>Member of Parliament</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Havo Molisale</td>
+                <td>Malo / Aore</td>
+                <td>Nagriamel</td>
+<!--                <td>37</td>-->
+                <td>Second Deputy Speaker, Elected on 11 February 2016 - 23 February 2016</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Harry Iarris Iauko</td>
+                <td>Tanna</td>
+                <td>Vanuaaku Pati (VP) from 2008 to 2012
+Iauko and Group 2012</td>
+<!--                <td>53</td>-->
+                <td>Minister of Infrastructure and Public Utilities, Appointed on the 19th November 2012</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Ham Lini Vanuaroroa</td>
+                <td>Pentecost</td>
+                <td>National United Party</td>
+<!--                <td>27</td>-->
+                <td>Minister of Planning and climate change Adaptation, Appointed on 11 February 2016</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Iavuth Sandie</td>
+                <td>Epi</td>
+                <td>National United Party (NUP)</td>
+<!--                <td>22</td>-->
+                <td>Member of Parliament</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Ian Wilson Toakalana</td>
+                <td>Maewo</td>
+                <td>Vanuatu Leaders Party</td>
+<!--                <td>46</td>-->
+                <td>Member of parliament</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon.Ioane Simon Omawa</td>
+                <td>Epi</td>
+                <td>Vanuatu Labour Party (VLP)</td>
+<!--                <td>47</td>-->
+                <td>Minister of Education (Dec-2010 to February, 2011)</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Iatika Morking Stephen</td>
+                <td>Tanna</td>
+                <td>United Moderate Party (UMP)</td>
+<!--                <td>51</td>-->
+                <td>Minister of Health, Appointed on 11 June 2015</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Joshua Kalsakau</td>
+                <td>Efate</td>
+                <td>Vanuatu Leba Pati (VLP)</td>
+<!--                <td>41</td>-->
+                <td>Minister of Justice and Social Welfare, 2007 - 2008</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. John Amos Vacher</td>
+                <td>Tongoa</td>
+                <td>People Prograssive Party</td>
+<!--                <td>62</td>-->
+                <td>Member of Parliament</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Jay Ngwele</td>
+                <td>Ambae</td>
+                <td>Rural Development Party</td>
+<!--                <td>37</td>-->
+                <td>Minister of Infrastructure and Public Utilities, Appointed on 20 April 2020</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Job Sam Andy</td>
+                <td>Paama</td>
+                <td>VLP</td>
+<!--                <td>65</td>-->
+                <td>Member of Parliament</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Jotham Napat</td>
+                <td>Tanna</td>
+                <td>Vanuatu Leaders Party</td>
+<!--                <td>64</td>-->
+                <td>Deputy Prime Minister and Minister of Toursm, Commerce, Trades and Ni Vanuatu Business, Appointed on 18 June 2019 to 20 April 2020</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Jimmy Nipo</td>
+                <td>Tanna</td>
+                <td>Vanuatu Leaders Party</td>
+<!--                <td>38</td>-->
+                <td>Member of Parliament</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Jacob Matanagwele</td>
+                <td>Ambae</td>
+                <td>Nagriamal</td>
+<!--                <td>37</td>-->
+                <td>Member of Parliament</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. John Still Tari Qetu</td>
+                <td>Ambae</td>
+                <td>NIUP</td>
+<!--                <td>61</td>-->
+                <td>Member of Parliament</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Jossie Masmas</td>
+                <td>Ambrym</td>
+                <td>Vanuatu Republican Party (VRP)</td>
+<!--                <td>47</td>-->
+                <td>Member of Parliament</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. John Lum</td>
+                <td>Santo Rural</td>
+                <td>Nagriamel</td>
+<!--                <td>64</td>-->
+                <td>Minister of Youth and Sport, Appointed on 5 May 2015 - 11 June 2015</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Joe Natuman</td>
+                <td>Tanna</td>
+                <td>Vanuaaku Party (VP)</td>
+<!--                <td>63</td>-->
+                <td>Deputy Prime Minister and and Minister of Toursm, Commerce, Trades and Ni Vanuatu Business, Appointed on 11 February 2016 - 23 May 2018</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Jerome Ludvaune</td>
+                <td>Malekula</td>
+                <td>RMC</td>
+<!--                <td>56</td>-->
+                <td>Minister of Health, Appointed on 23 November 2016</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. James Bule</td>
+                <td>Ambae</td>
+                <td>PUDP</td>
+<!--                <td>43</td>-->
+                <td>Minister of Tourism, Commerce, Trades and Ni Vanuatu Business, Appointed on 20 April 2020</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Jack Eric</td>
+                <td>Luganvlle/Santo</td>
+                <td>National United Party (NUP)</td>
+<!--                <td>46</td>-->
+                <td>Member of Parliament</td>
+                <td><a href="#">View Parliament</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Kenneth Natapei</td>
+                <td>Port-Vila</td>
+                <td>Vanuaku Pati</td>
+<!--                <td>47</td>-->
+                <td>Member of Parliament</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Kaltalio Simeon</td>
+                <td>Malekula</td>
+                <td>Vanuaaku Party (VP)</td>
+<!--                <td>21</td>-->
+                <td>Member of Parliament</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Lorin Solomon</td>
+                <td>Santa Rural</td>
+                <td>Union of Moderate Party (UMP)</td>
+<!--                <td>30</td>-->
+                <td>Member of Parliament</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Leonard Joshua Pikioune</td>
+                <td>Santo Rural</td>
+                <td>Nagriamel Movement</td>
+<!--                <td>51</td>-->
+                <td>Member of Parliament</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Louis Etap</td>
+                <td>Tanna</td>
+                <td>People Progressive Pati (PPP)</td>
+<!--                <td>29</td>-->
+                <td>Minister for Ni-Vanuatu Business, 2006</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+            <tr>
+                <td>Hon. Leignkone Tao Bruno</td>
+                <td>Ambrym</td>
+                <td>National United Party</td>
+<!--                <td>27</td>-->
+                <td>Minister of Planning and climate change Adaptation, re-appointed on 20 April 2020</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+              <tr>
+                <td>Hon. Maki Standley Simelum</td>
+                <td>Ambrym</td>
+                <td>Vanuaaku Party</td>
+<!--                <td>27</td>-->
+                <td>Minister of Finance and Economic Management, 10th May 2013 - 11 June 2015</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+              <tr>
+                <td>Hon. Meltek Sato Kilman Livtunvanu</td>
+                <td>Malekula</td>
+                <td>People Progresive Party (PPP)</td>
+<!--                <td>27</td>-->
+                <td>Deputy Leader of Opposition, Appointed on 15 February 2016
+Prime Minister, Elected on11 June 2015 - 11 February 2016</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+              <tr>
+                <td>Hon. Marcellino Barthelemy</td>
+                <td>Malekula</td>
+                <td>RMC</td>
+<!--                <td>27</td>-->
+                <td>Fouth Deputy Speaker, Appointed on 11 February 2016 to January 2020</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+             <tr>
+                <td>Hon. Marcellino Pipite</td>
+                <td>Santo Rural</td>
+                <td>Vanuatu Republican Party (VRP)</td>
+<!--                <td>27</td>-->
+                <td>Speaker of Parliament, Elected on 16th June 2015</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+             <tr>
+                <td>Hon. Maxime Carlot Korman</td>
+                <td>Efate</td>
+                <td>Vanuatu Republican Party (VRP)</td>
+<!--                <td>27</td>-->
+                <td>First Speaker of Parliament, Appointed on 1980 - 1983</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+             <tr>
+                <td>Hon. Moses Kahu</td>
+                <td>Tanna</td>
+                <td>Vanuaaku Pati (VP)</td>
+<!--                <td>27</td>-->
+                <td>Member of Parliament</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+             <tr>
+                <td>Hon. Nawai Tesei John</td>
+                <td>Tafea outer islands</td>
+                <td>Vanuaaku Party (VP)</td>
+<!--                <td>27</td>-->
+                <td>Member of Parliament</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+             <tr>
+                <td>Hon. Natapei Edward Nipake</td>
+                <td>Port-Vila</td>
+                <td>Vanuaaku Party (VP)</td>
+<!--                <td>27</td>-->
+                <td>Leader of Opposition, appointed on 11 June 2015 - 28 July 2015</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+              <tr>
+                <td>Hon. Peter Vuta</td>
+                <td>Ambae</td>
+                <td>People's Action Party (PAP)</td>
+<!--                <td>27</td>-->
+                <td>First Deputy Speaker, Elected on 2008 - 2009</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+              <tr>
+                <td>Hon. Prasad Arnold</td>
+                <td>Santo</td>
+                <td>Green Confederation</td>
+<!--                <td>27</td>-->
+                <td>3rd Deputy Speaker, Electedon 16 June 2015</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+              <tr>
+                <td>Hon. Paul Telukluk</td>
+                <td>Malekula</td>
+                <td>Namangi Aute (NMA)</td>
+<!--                <td>27</td>-->
+                <td>Minister of Lands, Geology and Mines, Appointed on 11 June 2015</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+              <tr>
+                <td>Hon. Ps Don Ken Stephen</td>
+                <td>Malekula</td>
+                <td>Peoples Development Services Party (PDSP)</td>
+<!--                <td>27</td>-->
+                <td>Minister of Justice and Community Services, Appointed on 10 November 2018 to 20 April 2020</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+               <tr>
+                <td>Hon. Patrick Growby Manarewo</td>
+                <td>Malekula</td>
+                <td>Union of Moderate Party (UMP)</td>
+<!--                <td>27</td>-->
+                <td> Minister of Internal Affairs 2013</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+               <tr>
+                <td>Hon. Raphael Worwor</td>
+                <td>Ambrym</td>
+                <td>Union of Moderate Parties (UMP), 2002 - 2012
+RMC, 2012</td>
+<!--                <td>27</td>-->
+                <td>Minister for Youth and Sport, 2002 - 2004</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+               <tr>
+                <td>Hon. Rokrok Charlie</td>
+                <td>Malekula</td>
+                <td>National United Party (NUP)</td>
+<!--                <td>27</td>-->
+                <td>Member of Parliament</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+               <tr>
+                <td>Hon. Robert Sikol Bohn</td>
+                <td>Epi</td>
+                <td>Vanuatu Progressive Development Party (VPDP)</td>
+<!--                <td>27</td>-->
+                <td>Minister of Justice</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+               <tr>
+                <td>Hon. Ronald Warsal Kalmasei</td>
+                <td>Santo Rural</td>
+                <td>Vanuaaku Party</td>
+<!--                <td>27</td>-->
+                <td>Minister of Justice and Community Services, Appointed on 11 February 2016 - 10 November 2018</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+               <tr>
+                <td>Hon. Richard Mera</td>
+                <td>Ambae</td>
+                <td>Vanuaaku Party</td>
+<!--                <td>27</td>-->
+                <td>Member of Parliament</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+               <tr>
+                <td>Hon. Steven Kalsakau</td>
+                <td>Efate</td>
+                <td>Union of Moderate Party (UMP) 2002 - 2012
+RMC 2012</td>
+<!--                <td>27</td>-->
+                <td>Parliamentary Secretariate, 11 June 2015</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+               <tr>
+                <td>Hon. Song Keasipai</td>
+                <td>Tanna</td>
+                <td>John Frum (JF)</td>
+<!--                <td>27</td>-->
+                <td>First Deputy Speaker 1992—1995</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+               <tr>
+                <td>Hon. Sampo Roro</td>
+                <td>Efate</td>
+                <td>National United Party (NUP)</td>
+<!--                <td>27</td>-->
+                <td>Minister of Youth and Sports, 2007—08</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+               <tr>
+                <td>Hon. Silas Bule Melve</td>
+                <td> Pentecost</td>
+                <td>National United Party (NUP)</td>
+<!--                <td>27</td>-->
+                <td>Minister of Health, Appointed on 20 April 2020</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+                 <tr>
+                <td>Hon. Sela Molisa</td>
+                <td> Santo Rural</td>
+                <td>Vanuaaku Party (VP)</td>
+<!--                <td>27</td>-->
+                <td>Minister for Finance, 2002—2004</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+                 <tr>
+                <td>Hon. Toara Kalo Daniel</td>
+                <td> Sherpherds Islands</td>
+                <td>National United Party (NUP)</td>
+<!--                <td>27</td>-->
+                <td>Second Deputy Sepaker, Elected on 13rd December 2016</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+                 <tr>
+                <td>Hon. Taso Leinavao</td>
+                <td>  Epi Island</td>
+                <td>Vanuaaku Party (VP)</td>
+<!--                <td>27</td>-->
+                <td>Minister of Education, 2007—2008</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+                 <tr>
+                <td>Hon. Tamata Noel</td>
+                <td> Pentecost</td>
+                <td>Peoples Progressive Party (PPP)</td>
+<!--                <td>27</td>-->
+                <td>Member of Parliament</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+                 <tr>
+                <td>Hon. Taga Henri Tarikarea</td>
+                <td> Port Vila</td>
+                <td>Union of Moderate Parties (UMP)</td>
+<!--                <td>27</td>-->
+                <td>Speaker of Parliament, 2002—03</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+                     <tr>
+                <td>Hon. Tom Seule</td>
+                <td>Tongoa</td>
+                <td>National United Party (NUP)</td>
+<!--                <td>27</td>-->
+                <td>Member of Parliament</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+                     <tr>
+                <td>Hon.Thomas Laken</td>
+                <td>Tanna</td>
+                <td>Green Confederation (GC)</td>
+<!--                <td>27</td>-->
+                <td>Minister of Climate Change Adaptation, Appointed on 11 June 2015</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+                     <tr>
+                <td>Hon. Tapangararua J. Willie</td>
+                <td> Port Vila</td>
+                <td>VLDP</td>
+<!--                <td>27</td>-->
+                <td>Minister of Finance and Economic Management, Appointed on 11 June 2015</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+                     <tr>
+                <td>Hon. Vohor Serge Rialuth</td>
+                <td> Santo Rural</td>
+                <td>Union of Moderate Parties (UMP)</td>
+<!--                <td>27</td>-->
+                <td>Minister of Foreign Affairs and External Trades, Appointed 11 June 2014 - 22 October 2015</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+                     <tr>
+                <td>Hon. Wesly Rasu</td>
+                <td>Malo/Aore</td>
+                <td>VP</td>
+<!--                <td>27</td>-->
+                <td>Member of Parliament</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+                     <tr>
+                <td>Hon. Xavier Emanuel Harry</td>
+                <td> Tanna</td>
+                <td>Iauko Group</td>
+<!--                <td>27</td>-->
+                <td>Speaker of Parliament, 2002—03</td>
+                <td><a href="#">View Profile</a></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th style="color: #079434;">Name</th>
+                <th style="color: #079434;">Constituency</th>
+                <th style="color: #079434;">Party</th>
+<!--                <th style="color: #079434;">Legislature</th>-->
+                <th style="color: #079434;">Position/Portfolio</th>
+                <th style="color: #079434;">Profile</th>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+
+</html>
